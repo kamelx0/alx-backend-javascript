@@ -1,15 +1,9 @@
-export function taskFirst() {
-  const task = 'I prefer const when I can.';
-  return task;
-}
+export default function appendToEachArrayValue(array, appendString) {
+  const newArray = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of array) {
+    newArray.push(appendString + value);
+  }
 
-export function getLast() {
-  return ' is okay';
-}
-
-export function taskNext() {
-  let combination = 'But sometimes let';
-  combination += getLast();
-
-  return combination;
+  return newArray;
 }
