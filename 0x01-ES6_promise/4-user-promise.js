@@ -1,6 +1,3 @@
-export default function handleResponseFromAPI(promise) {
-  return promise
-    .then(() => ({ status: 200, body: 'success' }))
-    .catch(() => new Error())
-    .finally(() => console.log('Got a response from the API'));
-}
+import signUpUser from "./4-user-promise";
+
+console.log(signUpUser("Bob", "Dylan"));
