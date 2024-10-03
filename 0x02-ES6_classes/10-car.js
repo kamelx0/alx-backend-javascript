@@ -1,13 +1,35 @@
-/**
- * Represents a class room.
- */
-export default class ClassRoom {
-  /**
-   * Creates a new @see {@link ClassRoom}.
-   * @param {Number} maxStudentsSize - The maximum number of
-   * students in the class.
-   */
-  constructor(maxStudentsSize) {
-    this._maxStudentsSize = maxStudentsSize;
+export default class Car {
+  constructor(brand, motor, color) {
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
+  }
+
+  get brand() {
+    return this._brand;
+  }
+
+  set brand(brand) {
+    this._brand = brand;
+  }
+
+  get motor() {
+    return this._motor;
+  }
+
+  set motor(motor) {
+    this._motor = motor;
+  }
+
+  get color() {
+    return this._color;
+  }
+
+  set color(color) {
+    this._color = color;
+  }
+
+  cloneCar() {
+    return new this.constructor();
   }
 }
